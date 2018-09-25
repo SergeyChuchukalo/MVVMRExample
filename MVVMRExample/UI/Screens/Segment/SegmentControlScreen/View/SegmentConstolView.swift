@@ -10,7 +10,9 @@ import UIKit
 
 class SegmentConstolView: UIViewController {
     /// Outlets
+    @IBOutlet private weak var segmentControl: UISegmentedControl!
     @IBOutlet private weak var buttonRoute: UIButton!
+    @IBOutlet private weak var questionLabel: UILabel!
     /// View model
     var viewModel: PSegmentConstolViewModel?
     /// Constatns
@@ -53,58 +55,55 @@ class SegmentConstolView: UIViewController {
     private func setupView() {
         viewModel?.callback = { [weak self] state in DispatchQueue.main.async { self?.onStateChange(state) } }
         buttonRoute.addTarget(self, action: #selector(buttonRouteTouch), for: .touchUpInside)
-//        self.title = 
+        segmentControl.addTarget(self, action: #selector(segmentValueChanged), for: .valueChanged)
         viewModel?.viewLoad()
+        if let vm = viewModel {
+            segmentControl.removeAllSegments()
+            var index = 0
+            for title in vm.getSegmentTitle() {
+                segmentControl.insertSegment(withTitle: title, at: index, animated: true)
+                index += 1
+            }
+            segmentControl.selectedSegmentIndex = vm.getSelectedSegment()
+        }
+        onLoaded()
     }
-    //––––––––––––––––––––––––––––––––––––––––
-    // MARK: - On state change -
+    ///––––––––––––––––––––––––––––––––––––––––
+    /// MARK: - On state change -
     /// On state change with LoginViewState
     ///
     /// - Parameter state: LoginViewState
     private func onStateChange(_ state: SegmentConstolViewState) {
         switch state {
-        case .loading:
-//            showLoadingIndicator(true)
-            break
         case .loaded:
-//            showLoadingIndicator(false)
+            onLoaded()
+        case .openGreenScreen:
             break
-        case .error(let error):
-            debugPrint(error)
-//            showLoadingIndicator(false)
-//            self.showErrorMessage(title: error)
+        case .openYellowScreen:
+            break
+        case .openRedScreen:
             break
         }
     }
-    
+    private func onLoaded() {
+        if let vm = viewModel {
+            title = vm.getTitle()
+            view.backgroundColor = vm.getBackgroundColor()
+            buttonRoute.setTitleColor(vm.getButtonTitle(), for: .normal)
+            buttonRoute.backgroundColor = vm.getButtonBackground()
+            buttonRoute.setTitle(vm.getButtonTitle(), for: .normal)
+            segmentControl.tintColor = vm.getSegmentTintColor()
+            questionLabel.textColor = vm.getQuestion()
+            questionLabel.text = vm.getQuestion()
+        }
+    }
+    ///––––––––––––––––––––––––––––––––––––––––
     /// User Interaction
-    
     @objc private func buttonRouteTouch() {
         Router.showSegmentConstolView(self)
     }
-
+    
+    @objc private func segmentValueChanged() {
+        viewModel?.segmentValueChange(segmentControl.selectedSegmentIndex)
+    }
 }
-
-
-
-func printPisition() {
-    debugPrint("Middle/Senior React JS")
-    debugPrint("Middle Magento Developer")
-    debugPrint("Full Stack React&Node.JS")
-    debugPrint("Front End Developer (Typescript & Angular)")
-    debugPrint("WPF, MVVM Middle")
-    debugPrint("Front End Developer with Typescript")
-    debugPrint("Full Stack PHP with Angular")
-    debugPrint("Demandware")
-    debugPrint("Big Data Architect")
-}
-
-
-
-
-
-
-
-
-
-

@@ -9,7 +9,8 @@
 import Foundation
 
 enum SegmentConstolViewState {
-    case loading
     case loaded
-    case error(String)
+    case openGreenScreen
+    case openYellowScreen
+    case openRedScreen
 }

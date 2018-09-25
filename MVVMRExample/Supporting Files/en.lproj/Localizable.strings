@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  MVVMRExample
+
+  Created by Sergey Chuchukalo on 9/23/18.
+  Copyright © 2018 Sergey. All rights reserved.
+*/
+
+"SegmentConstolModel:Green" = "Green";
+"SegmentConstolModel:Yellow" = "Yellow";
+"SegmentConstolModel:Red" = "Red";
+"SegmentConstolModel:OpenDetail" = "Open %@ Detail";
+"SegmentConstolModel:QuestionText" = "On what color of a traffic light it is possible to cross the road?";

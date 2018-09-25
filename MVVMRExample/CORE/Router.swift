@@ -13,7 +13,7 @@ class Router {
     class func createRootWindow() -> UIWindow {
         let window = UIWindow()
         let view = SegmentConstolView()
-        view.viewModel = SegmentConstolViewModel()
+        view.viewModel = SegmentConstolViewModel(0)
         window.rootViewController = UINavigationController(rootViewController: view)
         window.makeKeyAndVisible()
         return window
@@ -21,7 +21,7 @@ class Router {
     
     class func showSegmentConstolView(_ viewController: UIViewController) {
         let view = SegmentConstolView()
-        view.viewModel = SegmentConstolViewModel()
+        view.viewModel = SegmentConstolViewModel(0)
         viewController.show(view, sender: self)
     }
 }

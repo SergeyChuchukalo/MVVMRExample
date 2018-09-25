@@ -17,6 +17,8 @@
 		A5C5BFAE2157041C004F2049 /* SegmentConstolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5BFAD2157041C004F2049 /* SegmentConstolViewModel.swift */; };
 		A5C5BFB6215713B9004F2049 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C5BFB8215713B9004F2049 /* LaunchScreen.storyboard */; };
 		A5C5BFBA215713EB004F2049 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5C5BFBC215713EB004F2049 /* Localizable.strings */; };
+		A5C5BFBF215A5C14004F2049 /* SegmentConstolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5BFBE215A5C14004F2049 /* SegmentConstolModel.swift */; };
+		A5C5BFC1215A8BCA004F2049 /* StyleGuid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5BFC0215A8BCA004F2049 /* StyleGuid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		A5C5BFB9215713CD004F2049 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5C5BFBB215713EB004F2049 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A5C5BFBD215713EF004F2049 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A5C5BFBE215A5C14004F2049 /* SegmentConstolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentConstolModel.swift; sourceTree = "<group>"; };
+		A5C5BFC0215A8BCA004F2049 /* StyleGuid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				A5C5BFAB21570337004F2049 /* Router.swift */,
+				A5C5BFC0215A8BCA004F2049 /* StyleGuid.swift */,
 			);
 			path = CORE;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				A5C5BFA92157024A004F2049 /* SegmentConstolViewState.swift */,
+				A5C5BFBE215A5C14004F2049 /* SegmentConstolModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,9 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C5BFBF215A5C14004F2049 /* SegmentConstolModel.swift in Sources */,
 				A5C5BF892157006A004F2049 /* AppDelegate.swift in Sources */,
 				A5C5BFAE2157041C004F2049 /* SegmentConstolViewModel.swift in Sources */,
 				A5C5BFAA2157024A004F2049 /* SegmentConstolViewState.swift in Sources */,
+				A5C5BFC1215A8BCA004F2049 /* StyleGuid.swift in Sources */,
 				A5C5BFAC21570337004F2049 /* Router.swift in Sources */,
 				A5C5BFA7215701CA004F2049 /* PSegmentConstolViewModel.swift in Sources */,
 				A5C5BFA421570159004F2049 /* SegmentConstolView.swift in Sources */,
