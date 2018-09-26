@@ -29,7 +29,6 @@
                     </wkWebViewConfiguration>
                 </wkWebView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="hxF-5b-G1i" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="63i-30-MWi"/>
                 <constraint firstAttribute="bottom" secondItem="hxF-5b-G1i" secondAttribute="bottom" id="7I1-46-ZB7"/>
