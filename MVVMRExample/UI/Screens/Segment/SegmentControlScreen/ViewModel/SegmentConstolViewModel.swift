@@ -19,15 +19,15 @@ class SegmentConstolViewModel: PSegmentConstolViewModel {
     ///––––––––––––––––––––––––––––––––––––––––
     /// View load
     func viewLoad() {
-        
+        /// You can create in this method call to api
     }
     /// View appear
     func viewAppear() {
-        
+        /// You can update UI 
     }
     /// View disappear
     func viewDisappear() {
-        
+        /// You can create saving data from this model
     }
     /// Initialize
     init(_ selectSegment: Int) {

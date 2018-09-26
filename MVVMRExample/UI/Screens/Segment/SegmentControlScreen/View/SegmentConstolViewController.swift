@@ -116,7 +116,7 @@ class SegmentConstolViewController: UIViewController {
     @objc private func buttonRouteTouch() {
         viewModel?.buttonTouch()
     }
-    
+    /// Segment value change
     @objc private func segmentValueChanged() {
         viewModel?.segmentValueChange(segmentControl.selectedSegmentIndex)
     }
