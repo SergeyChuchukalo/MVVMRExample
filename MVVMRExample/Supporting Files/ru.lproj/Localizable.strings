@@ -6,8 +6,16 @@
   Copyright © 2018 Sergey. All rights reserved.
 */
 
+/// SegmentConstolModel
 "SegmentConstolModel:Green" = "Зеленый";
 "SegmentConstolModel:Yellow" = "Жёлтый";
 "SegmentConstolModel:Red" = "Красный";
 "SegmentConstolModel:OpenDetail" = "Открыть %@ цвет";
 "SegmentConstolModel:QuestionText" = "На какой цвет светофора можно переходить через дорогу?";
+/// YellowViewModel
+"YellowViewModel:Title" = "Желтая веб страничка";
+/// RedViewModel
+"RedViewModel:Title" = "Крассная страничка с картинкой";
+/// GreenViewModel
+"GreenViewModel:Title" = "Зеленая страничка с текстом";
+"GreenViewModel:Success" = "Совершенно верно!";

@@ -6,8 +6,16 @@
   Copyright © 2018 Sergey. All rights reserved.
 */
 
+/// SegmentConstolModel
 "SegmentConstolModel:Green" = "Green";
 "SegmentConstolModel:Yellow" = "Yellow";
 "SegmentConstolModel:Red" = "Red";
 "SegmentConstolModel:OpenDetail" = "Open %@ Detail";
 "SegmentConstolModel:QuestionText" = "On what color of a traffic light it is possible to cross the road?";
+/// YellowViewModel
+"YellowViewModel:Title" = "Yellow image view";
+/// RedViewModel
+"RedViewModel:Title" = "Red web view";
+/// GreenViewModel
+"GreenViewModel:Title" = "Green label view";
+"GreenViewModel:Success" = "You are right!";

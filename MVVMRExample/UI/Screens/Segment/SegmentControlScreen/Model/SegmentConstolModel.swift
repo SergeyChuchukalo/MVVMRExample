@@ -11,6 +11,13 @@ private let greenTextLabel: String = NSLocalizedString("SegmentConstolModel:Gree
 private let yellowTextLabel: String = NSLocalizedString("SegmentConstolModel:Yellow", comment: "Yellow")
 private let redTextLabel: String = NSLocalizedString("SegmentConstolModel:Red", comment: "Red")
 
+enum SegmentIdentifiers: Int {
+    case greenIdentifire = 0
+    case yellowIdentifire
+    case redIdentifire
+    case blueIdentifire
+}
+
 struct SegmentConstolModel {
     let segmentNameArray = [greenTextLabel, yellowTextLabel, redTextLabel]
     let segmentColorArray = [StyleGuide.Color.green, StyleGuide.Color.yellow, StyleGuide.Color.red]

@@ -16,7 +16,7 @@ protocol PSegmentConstolViewModel {
     func viewAppear()
     /// View disappear
     func viewDisappear()
-    /// Default setup view controller
+    /// Setup view controller
     ///––––––––––––––––––––––––––––––––––––––––
     /// Title
     func getTitle() -> String
@@ -41,4 +41,6 @@ protocol PSegmentConstolViewModel {
     ///––––––––––––––––––––––––––––––––––––––––
     /// User interaction segment change
     func segmentValueChange(_ value: Int)
+    /// Button touch event
+    func buttonTouch()
 }

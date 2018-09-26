@@ -8,66 +8,91 @@
 
 import UIKit
 class SegmentConstolViewModel: PSegmentConstolViewModel {
+    /// Variable
     var callback: ((SegmentConstolViewState) -> Void)?
+    /// Private constants
     private let questionText = NSLocalizedString("SegmentConstolModel:QuestionText", comment: "What color?")
+    private let detailText = NSLocalizedString("SegmentConstolModel:OpenDetail", comment: "Open detail")
     private var selectedSegment: Int
     private let model = SegmentConstolModel()
-    func getSelectedSegment() -> Int {
-        return selectedSegment
+    /// Detail state of view model
+    ///––––––––––––––––––––––––––––––––––––––––
+    /// View load
+    func viewLoad() {
+        
     }
-    
+    /// View appear
+    func viewAppear() {
+        
+    }
+    /// View disappear
+    func viewDisappear() {
+        
+    }
+    /// Initialize
     init(_ selectSegment: Int) {
         selectedSegment = selectSegment
     }
+    /// Setup view controller
+    ///––––––––––––––––––––––––––––––––––––––––
+    /// Title
+    func getTitle() -> String {
+        return model.segmentNameArray[selectedSegment]
+    }
+    /// Segments title array
+    func getSegmentTitle() -> [String] {
+        return model.segmentNameArray
+    }
+    /// Selected segment
+    func getSelectedSegment() -> Int {
+        return selectedSegment
+    }
+    /// Button title
+    func getButtonTitle() -> String {
+        return String(format:detailText, model.segmentNameArray[selectedSegment])
+    }
+    /// Buttom text color
+    func getButtonTitle() -> UIColor {
+        return model.segmentColorArray[selectedSegment]
+    }
+    /// Button color
+    func getButtonBackground() -> UIColor {
+        return model.segmentAntipodeColorArray[selectedSegment]
+    }
+    /// View background color
+    func getBackgroundColor() -> UIColor {
+        return model.segmentColorArray[selectedSegment]
+    }
+    /// Segment tint color
+    func getSegmentTintColor() -> UIColor {
+        return model.segmentAntipodeColorArray[selectedSegment]
+    }
+    /// Question color
+    func getQuestion() -> UIColor {
+        return model.segmentAntipodeColorArray[selectedSegment]
+    }
+    /// Question text
+    func getQuestion() -> String {
+        return questionText
+    }
+    ///––––––––––––––––––––––––––––––––––––––––
+    /// User interaction segment change
+    /// Segment change
     func segmentValueChange(_ value: Int) {
         selectedSegment = value
         callback?(.loaded)
     }
-    
-    func getTitle() -> String {
-        return model.segmentNameArray[selectedSegment]
-    }
-    
-    func getSegmentTitle() -> [String] {
-        return model.segmentNameArray
-    }
-    
-    func getButtonTitle() -> String {
-        let detailText = NSLocalizedString("SegmentConstolModel:OpenDetail", comment: "open detail")
-        return String(format:detailText, model.segmentNameArray[selectedSegment])
-    }
-    
-    func getButtonTitle() -> UIColor {
-        return model.segmentColorArray[selectedSegment]
-    }
-    
-    func getButtonBackground() -> UIColor {
-        return model.segmentAntipodeColorArray[selectedSegment]
-    }
-    
-    func getBackgroundColor() -> UIColor {
-        return model.segmentColorArray[selectedSegment]
-    }
-    
-    func getSegmentTintColor() -> UIColor {
-        return model.segmentAntipodeColorArray[selectedSegment]
-    }
-    func getQuestion() -> UIColor {
-        return model.segmentAntipodeColorArray[selectedSegment]
-    }
-    func getQuestion() -> String {
-        return questionText
-    }
-    
-    func viewLoad() {
-
-    }
-    
-    func viewAppear() {
-        
-    }
-    
-    func viewDisappear() {
-        
+    /// Button touch
+    func buttonTouch() {
+        switch selectedSegment {
+        case SegmentIdentifiers.greenIdentifire.rawValue:
+             callback?(.openGreenScreen)
+        case SegmentIdentifiers.yellowIdentifire.rawValue:
+             callback?(.openYellowScreen)
+        case SegmentIdentifiers.redIdentifire.rawValue:
+             callback?(.openRedScreen)
+        default:
+            break
+        }
     }
 }

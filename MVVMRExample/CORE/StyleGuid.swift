@@ -18,5 +18,6 @@ struct StyleGuide {
         static let redAntipode = UIColor(red: 50/255, green: 223/255, blue: 224/255, alpha: 1.0)
     }
     struct Font {
+        static let mainFont = UIFont.boldSystemFont(ofSize: 20)
     }
 }

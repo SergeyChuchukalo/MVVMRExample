@@ -9,16 +9,27 @@
 /* Begin PBXBuildFile section */
 		A5C5BF892157006A004F2049 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5BF882157006A004F2049 /* AppDelegate.swift */; };
 		A5C5BF9021570070004F2049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C5BF8F21570070004F2049 /* Assets.xcassets */; };
-		A5C5BFA421570159004F2049 /* SegmentConstolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5BFA221570159004F2049 /* SegmentConstolView.swift */; };
-		A5C5BFA521570159004F2049 /* SegmentConstolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C5BFA321570159004F2049 /* SegmentConstolView.xib */; };
+		A5C5BFA421570159004F2049 /* SegmentConstolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5BFA221570159004F2049 /* SegmentConstolViewController.swift */; };
+		A5C5BFA521570159004F2049 /* SegmentConstolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C5BFA321570159004F2049 /* SegmentConstolViewController.xib */; };
 		A5C5BFA7215701CA004F2049 /* PSegmentConstolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5BFA6215701CA004F2049 /* PSegmentConstolViewModel.swift */; };
-		A5C5BFAA2157024A004F2049 /* SegmentConstolViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5BFA92157024A004F2049 /* SegmentConstolViewState.swift */; };
 		A5C5BFAC21570337004F2049 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5BFAB21570337004F2049 /* Router.swift */; };
 		A5C5BFAE2157041C004F2049 /* SegmentConstolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5BFAD2157041C004F2049 /* SegmentConstolViewModel.swift */; };
 		A5C5BFB6215713B9004F2049 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C5BFB8215713B9004F2049 /* LaunchScreen.storyboard */; };
 		A5C5BFBA215713EB004F2049 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5C5BFBC215713EB004F2049 /* Localizable.strings */; };
 		A5C5BFBF215A5C14004F2049 /* SegmentConstolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5BFBE215A5C14004F2049 /* SegmentConstolModel.swift */; };
 		A5C5BFC1215A8BCA004F2049 /* StyleGuid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5BFC0215A8BCA004F2049 /* StyleGuid.swift */; };
+		A5E0CAB4215BC33A002B33CF /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E0CAB2215BC33A002B33CF /* GreenViewController.swift */; };
+		A5E0CAB5215BC33A002B33CF /* GreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E0CAB3215BC33A002B33CF /* GreenViewController.xib */; };
+		A5E0CAB8215BC360002B33CF /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E0CAB6215BC360002B33CF /* YellowViewController.swift */; };
+		A5E0CAB9215BC360002B33CF /* YellowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E0CAB7215BC360002B33CF /* YellowViewController.xib */; };
+		A5E0CABC215BC378002B33CF /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E0CABA215BC378002B33CF /* RedViewController.swift */; };
+		A5E0CABD215BC378002B33CF /* RedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E0CABB215BC378002B33CF /* RedViewController.xib */; };
+		A5E0CABF215BCBED002B33CF /* PGreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E0CABE215BCBED002B33CF /* PGreenViewModel.swift */; };
+		A5E0CAC1215BCC05002B33CF /* PYellowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E0CAC0215BCC05002B33CF /* PYellowViewModel.swift */; };
+		A5E0CAC3215BCC1A002B33CF /* PRedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E0CAC2215BCC1A002B33CF /* PRedViewModel.swift */; };
+		A5E0CAC5215BD882002B33CF /* YellowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E0CAC4215BD882002B33CF /* YellowViewModel.swift */; };
+		A5E0CAC7215BDD1A002B33CF /* RedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E0CAC6215BDD1A002B33CF /* RedViewModel.swift */; };
+		A5E0CAC9215BE139002B33CF /* GreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E0CAC8215BE139002B33CF /* GreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +37,9 @@
 		A5C5BF882157006A004F2049 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5C5BF8F21570070004F2049 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5C5BF9421570070004F2049 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MVVMRExample/Info.plist; sourceTree = "<group>"; };
-		A5C5BFA221570159004F2049 /* SegmentConstolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentConstolView.swift; sourceTree = "<group>"; };
-		A5C5BFA321570159004F2049 /* SegmentConstolView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentConstolView.xib; sourceTree = "<group>"; };
+		A5C5BFA221570159004F2049 /* SegmentConstolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentConstolViewController.swift; sourceTree = "<group>"; };
+		A5C5BFA321570159004F2049 /* SegmentConstolViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentConstolViewController.xib; sourceTree = "<group>"; };
 		A5C5BFA6215701CA004F2049 /* PSegmentConstolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSegmentConstolViewModel.swift; sourceTree = "<group>"; };
-		A5C5BFA92157024A004F2049 /* SegmentConstolViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentConstolViewState.swift; sourceTree = "<group>"; };
 		A5C5BFAB21570337004F2049 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A5C5BFAD2157041C004F2049 /* SegmentConstolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentConstolViewModel.swift; sourceTree = "<group>"; };
 		A5C5BFB7215713B9004F2049 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +48,18 @@
 		A5C5BFBD215713EF004F2049 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A5C5BFBE215A5C14004F2049 /* SegmentConstolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentConstolModel.swift; sourceTree = "<group>"; };
 		A5C5BFC0215A8BCA004F2049 /* StyleGuid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuid.swift; sourceTree = "<group>"; };
+		A5E0CAB2215BC33A002B33CF /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		A5E0CAB3215BC33A002B33CF /* GreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreenViewController.xib; sourceTree = "<group>"; };
+		A5E0CAB6215BC360002B33CF /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		A5E0CAB7215BC360002B33CF /* YellowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YellowViewController.xib; sourceTree = "<group>"; };
+		A5E0CABA215BC378002B33CF /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
+		A5E0CABB215BC378002B33CF /* RedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RedViewController.xib; sourceTree = "<group>"; };
+		A5E0CABE215BCBED002B33CF /* PGreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGreenViewModel.swift; sourceTree = "<group>"; };
+		A5E0CAC0215BCC05002B33CF /* PYellowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PYellowViewModel.swift; sourceTree = "<group>"; };
+		A5E0CAC2215BCC1A002B33CF /* PRedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRedViewModel.swift; sourceTree = "<group>"; };
+		A5E0CAC4215BD882002B33CF /* YellowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewModel.swift; sourceTree = "<group>"; };
+		A5E0CAC6215BDD1A002B33CF /* RedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewModel.swift; sourceTree = "<group>"; };
+		A5E0CAC8215BE139002B33CF /* GreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +128,9 @@
 		A5C5BF9D215700DD004F2049 /* Segment */ = {
 			isa = PBXGroup;
 			children = (
+				A5E0CAA8215BC260002B33CF /* RedScreen */,
+				A5E0CAA7215BC257002B33CF /* YellowScreen */,
+				A5E0CAA6215BC23E002B33CF /* GreenScreen */,
 				A5C5BF9E21570101004F2049 /* SegmentControlScreen */,
 			);
 			path = Segment;
@@ -124,7 +149,6 @@
 		A5C5BF9F21570115004F2049 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A5C5BFA92157024A004F2049 /* SegmentConstolViewState.swift */,
 				A5C5BFBE215A5C14004F2049 /* SegmentConstolModel.swift */,
 			);
 			path = Model;
@@ -133,8 +157,8 @@
 		A5C5BFA02157011C004F2049 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A5C5BFA221570159004F2049 /* SegmentConstolView.swift */,
-				A5C5BFA321570159004F2049 /* SegmentConstolView.xib */,
+				A5C5BFA221570159004F2049 /* SegmentConstolViewController.swift */,
+				A5C5BFA321570159004F2049 /* SegmentConstolViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +181,87 @@
 				A5C5BFB8215713B9004F2049 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5E0CAA6215BC23E002B33CF /* GreenScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A5E0CAAA215BC281002B33CF /* ViewModel */,
+				A5E0CAA9215BC278002B33CF /* View */,
+			);
+			path = GreenScreen;
+			sourceTree = "<group>";
+		};
+		A5E0CAA7215BC257002B33CF /* YellowScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A5E0CAAD215BC2C7002B33CF /* ViewModel */,
+				A5E0CAAC215BC2C1002B33CF /* View */,
+			);
+			path = YellowScreen;
+			sourceTree = "<group>";
+		};
+		A5E0CAA8215BC260002B33CF /* RedScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A5E0CAB0215BC2DB002B33CF /* ViewModel */,
+				A5E0CAAF215BC2D6002B33CF /* View */,
+			);
+			path = RedScreen;
+			sourceTree = "<group>";
+		};
+		A5E0CAA9215BC278002B33CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5E0CAB2215BC33A002B33CF /* GreenViewController.swift */,
+				A5E0CAB3215BC33A002B33CF /* GreenViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5E0CAAA215BC281002B33CF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A5E0CABE215BCBED002B33CF /* PGreenViewModel.swift */,
+				A5E0CAC8215BE139002B33CF /* GreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A5E0CAAC215BC2C1002B33CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5E0CAB6215BC360002B33CF /* YellowViewController.swift */,
+				A5E0CAB7215BC360002B33CF /* YellowViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5E0CAAD215BC2C7002B33CF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A5E0CAC0215BCC05002B33CF /* PYellowViewModel.swift */,
+				A5E0CAC4215BD882002B33CF /* YellowViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A5E0CAAF215BC2D6002B33CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5E0CABA215BC378002B33CF /* RedViewController.swift */,
+				A5E0CABB215BC378002B33CF /* RedViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5E0CAB0215BC2DB002B33CF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A5E0CAC2215BCC1A002B33CF /* PRedViewModel.swift */,
+				A5E0CAC6215BDD1A002B33CF /* RedViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +324,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5C5BFBA215713EB004F2049 /* Localizable.strings in Resources */,
+				A5E0CAB5215BC33A002B33CF /* GreenViewController.xib in Resources */,
 				A5C5BFB6215713B9004F2049 /* LaunchScreen.storyboard in Resources */,
-				A5C5BFA521570159004F2049 /* SegmentConstolView.xib in Resources */,
+				A5E0CABD215BC378002B33CF /* RedViewController.xib in Resources */,
+				A5C5BFA521570159004F2049 /* SegmentConstolViewController.xib in Resources */,
+				A5E0CAB9215BC360002B33CF /* YellowViewController.xib in Resources */,
 				A5C5BF9021570070004F2049 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,14 +340,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5E0CAB4215BC33A002B33CF /* GreenViewController.swift in Sources */,
+				A5E0CABF215BCBED002B33CF /* PGreenViewModel.swift in Sources */,
+				A5E0CAC5215BD882002B33CF /* YellowViewModel.swift in Sources */,
+				A5E0CAC7215BDD1A002B33CF /* RedViewModel.swift in Sources */,
 				A5C5BFBF215A5C14004F2049 /* SegmentConstolModel.swift in Sources */,
+				A5E0CAC3215BCC1A002B33CF /* PRedViewModel.swift in Sources */,
 				A5C5BF892157006A004F2049 /* AppDelegate.swift in Sources */,
 				A5C5BFAE2157041C004F2049 /* SegmentConstolViewModel.swift in Sources */,
-				A5C5BFAA2157024A004F2049 /* SegmentConstolViewState.swift in Sources */,
+				A5E0CAB8215BC360002B33CF /* YellowViewController.swift in Sources */,
 				A5C5BFC1215A8BCA004F2049 /* StyleGuid.swift in Sources */,
+				A5E0CABC215BC378002B33CF /* RedViewController.swift in Sources */,
 				A5C5BFAC21570337004F2049 /* Router.swift in Sources */,
+				A5E0CAC9215BE139002B33CF /* GreenViewModel.swift in Sources */,
 				A5C5BFA7215701CA004F2049 /* PSegmentConstolViewModel.swift in Sources */,
-				A5C5BFA421570159004F2049 /* SegmentConstolView.swift in Sources */,
+				A5C5BFA421570159004F2049 /* SegmentConstolViewController.swift in Sources */,
+				A5E0CAC1215BCC05002B33CF /* PYellowViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,27 +1,31 @@
 //
-//  SegmentConstolView.swift
+//  YellowViewController.swift
 //  MVVMRExample
 //
-//  Created by Sergey Chuchukalo on 9/23/18.
+//  Created by Sergey Chuchukalo on 9/26/18.
 //  Copyright © 2018 Sergey. All rights reserved.
 //
 
 import UIKit
+import WebKit
 
-class SegmentConstolView: UIViewController {
+/// State of YellowViewController
+enum YellowViewState {
+    case loaded
+}
+
+class YellowViewController: UIViewController {
     /// Outlets
-    @IBOutlet private weak var segmentControl: UISegmentedControl!
-    @IBOutlet private weak var buttonRoute: UIButton!
-    @IBOutlet private weak var questionLabel: UILabel!
+    @IBOutlet private weak var webView: WKWebView!
     /// View model
-    var viewModel: PSegmentConstolViewModel?
+    var viewModel: PYellowViewModel?
     /// Constatns
     //––––––––––––––––––––––––––––––––––––––––
     // MARK: - Init with coder-
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     //––––––––––––––––––––––––––––––––––––––––
     // MARK: - Deinit -
-    deinit { debugPrint("🔻Deinit SegmentConstolView") }
+    deinit { debugPrint("🔻Deinit YellowViewController") }
     //––––––––––––––––––––––––––––––––––––––––
     // MARK: - Init -
     init() {
@@ -54,17 +58,10 @@ class SegmentConstolView: UIViewController {
     /// Setup view navigation, tableView delegate and setup callback for view model
     private func setupView() {
         viewModel?.callback = { [weak self] state in DispatchQueue.main.async { self?.onStateChange(state) } }
-        buttonRoute.addTarget(self, action: #selector(buttonRouteTouch), for: .touchUpInside)
-        segmentControl.addTarget(self, action: #selector(segmentValueChanged), for: .valueChanged)
         viewModel?.viewLoad()
         if let vm = viewModel {
-            segmentControl.removeAllSegments()
-            var index = 0
-            for title in vm.getSegmentTitle() {
-                segmentControl.insertSegment(withTitle: title, at: index, animated: true)
-                index += 1
-            }
-            segmentControl.selectedSegmentIndex = vm.getSelectedSegment()
+            title = vm.getTitle()
+            view.backgroundColor = vm.getBackground()
         }
         onLoaded()
     }
@@ -73,37 +70,20 @@ class SegmentConstolView: UIViewController {
     /// On state change with LoginViewState
     ///
     /// - Parameter state: LoginViewState
-    private func onStateChange(_ state: SegmentConstolViewState) {
+    private func onStateChange(_ state: YellowViewState) {
         switch state {
         case .loaded:
             onLoaded()
-        case .openGreenScreen:
-            break
-        case .openYellowScreen:
-            break
-        case .openRedScreen:
-            break
-        }
-    }
-    private func onLoaded() {
-        if let vm = viewModel {
-            title = vm.getTitle()
-            view.backgroundColor = vm.getBackgroundColor()
-            buttonRoute.setTitleColor(vm.getButtonTitle(), for: .normal)
-            buttonRoute.backgroundColor = vm.getButtonBackground()
-            buttonRoute.setTitle(vm.getButtonTitle(), for: .normal)
-            segmentControl.tintColor = vm.getSegmentTintColor()
-            questionLabel.textColor = vm.getQuestion()
-            questionLabel.text = vm.getQuestion()
         }
     }
     ///––––––––––––––––––––––––––––––––––––––––
-    /// User Interaction
-    @objc private func buttonRouteTouch() {
-        Router.showSegmentConstolView(self)
-    }
-    
-    @objc private func segmentValueChanged() {
-        viewModel?.segmentValueChange(segmentControl.selectedSegmentIndex)
+    /// Helpers
+    /// On view change to loaded state
+    private func onLoaded() {
+        if let vm = viewModel {
+            if let url = vm.getAddress() {
+                webView.load(URLRequest(url: url))
+            }
+        }
     }
 }
